@@ -1,0 +1,20 @@
+package executordocod;
+
+import telas.TelaConsultaRoupa;
+
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+public class App {
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            TelaConsultaRoupa tela = new TelaConsultaRoupa();
+            tela.setVisible(true);
+        });
+    }
+}
